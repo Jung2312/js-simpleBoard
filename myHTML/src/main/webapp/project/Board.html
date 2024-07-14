@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+	<div
+		class="post-container container shadow-sm p-3 mb-5 bg-body rounded">
+		<div class="main-container" id="container">
+			<input type="button" class="btn-style btn btn-success" id="postBtn"
+				value="글작성" onclick="postPage()">
+
+			<table id="postTable" class="table table-striped">
+				<thead>
+					<tr>
+						<th>작성자</th>
+						<th>제목</th>
+						<th>날짜</th>
+					</tr>
+				</thead>
+				<tbody>
+
+				</tbody>
+			</table>
+
+		</div>
+
+		<div id="post-container" class="display-hidden">
+
+			<h1>게시글 작성</h1>
+
+			<p>작성자명</p>
+			<input type="text" id="user"
+				class="text-input-st shadow-sm p-3 mb-5 bg-body rounded">
+
+			<p>제목</p>
+			<input type="text" id="title"
+				class="text-input-st shadow-sm p-3 mb-5 bg-body rounded">
+
+			<p>내용</p>
+			<input type="text" id="contents"
+				class="text-input-st2 shadow-sm p-3 mb-5 bg-body rounded"> <br>
+			<input type="button" class="btn btn-light" id="listBtn" value="목록"
+				onclick="mainPage()"> 
+			<input type="button" value="저장"
+				class="save-btn btn btn-outline-primary" id="save"
+				onclick="postSave()">
+		</div>
+	</div>
+
+    <script src="js/GetMain.js"></script>
+	<script src="js/GetPostPage.js"></script>
+	<script src="js/PostSave.js"></script>
+	<script src="js/GetLoadPosts.js"></script>
+</body>
+</html>
